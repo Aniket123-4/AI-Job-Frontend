@@ -1,13 +1,23 @@
-import { Routes } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 
-import PublicRoutes from "./public-routes";
-import PrivateRoutes from "./private-routes";
+import RootLayout from "@/layouts/RootLayout";
+import { Home } from "@/features/home";
+import { NotFound } from "@/features/not-found";
 
-export default function AppRoutes() {
-    return (
-        <Routes>
-            {PublicRoutes()}
-            {PrivateRoutes()}
-        </Routes>
-    );
-}
+export const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <RootLayout />,
+        children: [
+            {
+                index: true,
+                element: <Home />,
+            },
+        ],
+    },
+
+    {
+        path: "*",
+        element: <NotFound />,
+    },
+]);
