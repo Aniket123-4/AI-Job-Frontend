@@ -1,7 +1,5 @@
-import { name } from "@/utils/test";
+import AppRouter from "./app/AppRouter";
 
-function App() {
-  return <h1>{name}</h1>;
+export default function App() {
+  return <AppRouter />;
 }
-
-export default App;
