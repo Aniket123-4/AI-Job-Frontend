@@ -1,9 +1,19 @@
+import HeroSection from "./components/HeroSection";
+import ResumeUploadCard from "./components/ResumeUploadCard";
+import JobDescriptionCard from "./components/JobDescriptionCard";
+import QuickActions from "./components/QuickActions";
+
 export default function Home() {
     return (
-        <div className="container mx-auto py-10">
-            <h1 className="text-4xl font-bold">
-                AI Job Assistant
-            </h1>
-        </div>
+        <section className="container mx-auto space-y-8 px-4 py-8">
+            <HeroSection />
+
+            <div className="grid gap-6 lg:grid-cols-2">
+                <ResumeUploadCard />
+                <JobDescriptionCard />
+            </div>
+
+            <QuickActions />
+        </section>
     );
 }
