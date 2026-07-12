@@ -29,7 +29,7 @@ export default function JobDescriptionCard() {
 
                     <Textarea
                         placeholder="Paste complete Job Description..."
-                        className="min-h-[150px]"
+                        className="min-h-37.5"
                     />
                 </div>
 
